@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { uuid } from 'react-uuid'
+import uuid from 'react-uuid'
 
 import { TodoList } from './components/TodoList'
 
@@ -31,7 +31,7 @@ export function App() {
 
     const toggleTodo = (id) => {
         const newTodos = [...todos];
-        const todo = newTodos.find((todo) => todo.id == id);
+        const todo = newTodos.find((todo) => todo.id === id);
         todo.completed = !todo.completed;
         setTodos(newTodos);
     };
