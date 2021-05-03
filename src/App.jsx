@@ -10,6 +10,8 @@ export function App() {
         { id: uuid(), task: 'Tarea 1', completed: false }
     ]);
 
+    const [left, setLeft] = useState(0)
+
     const todoTaskRef = useRef();
 
     useEffect(() => {
@@ -20,6 +22,10 @@ export function App() {
     useEffect(() => {
         localStorage.setItem(KEY, JSON.stringify(todos));
     }, [todos]);
+
+    useEffect(() => {
+        setLeft(todos.filter((todo) => !todo.completed).length)
+    }, [todos])
 
     const handleTodoAdd = () => {
         const task = todoTaskRef.current.value;
@@ -36,10 +42,6 @@ export function App() {
         setTodos(newTodos);
     };
 
-    const leftTaskTodo = () => {
-        return todos.filter((todo) => !todo.completed).length
-    };
-
     const handleClearAll = () => {
         const newTodos = todos.filter((todo) => !todo.completed);
         setTodos(newTodos);
@@ -52,7 +54,7 @@ export function App() {
             <button onClick={handleTodoAdd}>➕</button>
             <button onClick={handleClearAll}>🗑</button>
             <div>
-                <p>Te quedan {leftTaskTodo} tareas por terminar</p>
+                <p>Te quedan {left} tareas por terminar</p>
             </div>
         </>
     );
