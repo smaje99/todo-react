@@ -7,5 +7,12 @@ export function App() {
         { id: 1, task: 'Tarea 1', completed: false }
     ])
 
-    return <TodoList todos={todos} />
+    return (
+        <>
+            <TodoList todos={todos} />
+            <input type="text" placeholder="Nueva Tarea" />
+            <button>➕</button>
+            <button>🗑</button>
+        </>
+    );
 }
