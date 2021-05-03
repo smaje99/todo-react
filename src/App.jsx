@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { TodoList } from './components/TodoList'
+
 export function App() {
-    return (<div>Hola Mundo</div>)
+    return <TodoList todos={[]} />
 }
