@@ -5,7 +5,7 @@ import { TodoList } from './components/TodoList'
 
 export function App() {
     const [todos, setTodos] = useState([
-        { id: 1, task: 'Tarea 1', completed: false }
+        { id: uuid(), task: 'Tarea 1', completed: false }
     ]);
 
     const todoTaskRef = useRef();
@@ -29,12 +29,17 @@ export function App() {
         return todos.filter((todo) => !todo.completed).length
     };
 
+    const handleClearAll = () => {
+        const newTodos = todos.filter((todo) => !todo.completed);
+        setTodos(newTodos);
+    };
+
     return (
         <>
             <TodoList todos={todos} toggleTodo={toggleTodo} />
             <input ref={todoTaskRef} type="text" placeholder="Nueva Tarea" />
             <button onClick={handleTodoAdd}>➕</button>
-            <button onClick={}>🗑</button>
+            <button onClick={handleClearAll}>🗑</button>
             <div>
                 <p>Te quedan {leftTaskTodo} tareas por terminar</p>
             </div>
