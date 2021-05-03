@@ -1,7 +1,9 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import {v4 as uuid } from 'uuid/v4'
 
 import { TodoList } from './components/TodoList'
+
+const KEY = 'todoApp.todos'
 
 export function App() {
     const [todos, setTodos] = useState([
@@ -9,6 +11,15 @@ export function App() {
     ]);
 
     const todoTaskRef = useRef();
+
+    useEffect(() => {
+        const storedTodos = JSON.parse(localStorage.getItem(KEY));
+        storedTodos && setTodos(storedTodos);
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem(KEY, JSON.stringify(todos));
+    }, [todos]);
 
     const handleTodoAdd = () => {
         const task = todoTaskRef.current.value;
