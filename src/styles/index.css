@@ -2,3 +2,17 @@
     font-family: Roboto;
     src: url(../fonts/Roboto-Regular.ttf);
 }
+
+:root {
+    --background: #fffffe;
+    --headline: #2b2c34;
+    --paragraph: var(--headline);
+    --button: #6246ea;
+    --button-text: var(--background);
+    --item-background: #d1d1e9;
+    --item-item-checked: #e45858
+}
+
+html {
+    background-color: var(--background);
+}
