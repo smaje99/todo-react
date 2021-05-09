@@ -4,6 +4,8 @@ import uuid from 'react-uuid'
 
 import { TodoList } from './components/TodoList'
 
+import './styles/App.css'
+
 const KEY = 'todoApp.todos'
 
 export function App() {
@@ -49,14 +51,16 @@ export function App() {
     };
 
     return (
-        <>
+        <section className="app">
             <TodoList todos={todos} toggleTodo={toggleTodo} />
-            <input ref={todoTaskRef} type="text" placeholder="Nueva Tarea" />
-            <button onClick={handleTodoAdd}>➕</button>
-            <button onClick={handleClearAll}>🗑</button>
-            <div>
-                <p>Te quedan {left} tareas por terminar</p>
+            <div className="app__input">
+                <input ref={todoTaskRef} type="text" placeholder="Nueva Tarea" />
+                <button onClick={handleTodoAdd}>➕</button>
+                <button onClick={handleClearAll}>🗑</button>
             </div>
-        </>
+            <div className="app__left">
+                <p className="app__left__text">Te quedan {left} tareas por terminar</p>
+            </div>
+        </section>
     );
 }
