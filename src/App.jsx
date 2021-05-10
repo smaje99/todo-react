@@ -1,66 +1,13 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React from 'react';
 
-import uuid from 'react-uuid'
-
-import { TodoList } from './components/TodoList'
-
-import './styles/App.css'
-
-const KEY = 'todoApp.todos'
+import { Todo } from '../components/Todo'
+import { Avatar } from '../components/Avatar'
 
 export function App() {
-    const [todos, setTodos] = useState([
-        { id: uuid(), task: 'Tarea 1', completed: false }
-    ]);
-
-    const [left, setLeft] = useState(0)
-
-    const todoTaskRef = useRef();
-
-    useEffect(() => {
-        const storedTodos = JSON.parse(localStorage.getItem(KEY));
-        storedTodos && setTodos(storedTodos);
-    }, [])
-
-    useEffect(() => {
-        localStorage.setItem(KEY, JSON.stringify(todos));
-    }, [todos]);
-
-    useEffect(() => {
-        setLeft(todos.filter((todo) => !todo.completed).length)
-    }, [todos])
-
-    const handleTodoAdd = () => {
-        const task = todoTaskRef.current.value;
-        task !== '' && setTodos((prevTodos) => {
-            return [...prevTodos, { id: uuid(), task, completed: false }]
-        });
-        todoTaskRef.current.value = null;
-    };
-
-    const toggleTodo = (id) => {
-        const newTodos = [...todos];
-        const todo = newTodos.find((todo) => todo.id === id);
-        todo.completed = !todo.completed;
-        setTodos(newTodos);
-    };
-
-    const handleClearAll = () => {
-        const newTodos = todos.filter((todo) => !todo.completed);
-        setTodos(newTodos);
-    };
-
     return (
-        <section className="app">
-            <TodoList todos={todos} toggleTodo={toggleTodo} />
-            <div className="app__input">
-                <input ref={todoTaskRef} type="text" placeholder="Nueva Tarea" />
-                <button onClick={handleTodoAdd}>➕</button>
-                <button onClick={handleClearAll}>🗑</button>
-            </div>
-            <div className="app__left">
-                <p className="app__left__text">Te quedan {left} tareas por terminar</p>
-            </div>
-        </section>
+        <>
+            <Todo />
+            <Avatar />
+        </>
     );
 }
