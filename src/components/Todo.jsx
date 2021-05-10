@@ -59,7 +59,9 @@ export function Todo() {
                 <button onClick={handleClearAll}>🗑</button>
             </div>
             <div className="todo__left">
-                <p className="todo__left__text">Te quedan {left} tareas por terminar</p>
+                <p className="todo__left__text">
+                    Te quedan <span className="left">{left}</span> tareas por terminar
+                </p>
             </div>
         </section>
     );

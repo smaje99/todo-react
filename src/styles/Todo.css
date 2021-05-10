@@ -8,11 +8,13 @@
 .todo__input {
     display: grid;
     grid-template-columns: 8fr .5fr .5fr;
+    padding-top: 10px;
 }
 
 .todo__input > * {
     margin: 1px;
     font-family: Roboto;
+    font-size: 14px;
 }
 
 .todo__left {
@@ -22,5 +24,10 @@
 .todo__left__text {
     text-align: center;
     font-family: Roboto;
+    font-size: 22px;
     letter-spacing: .6px;
+}
+
+.left {
+    color: var(--highlight);
 }
