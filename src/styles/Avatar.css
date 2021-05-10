@@ -1,0 +1,42 @@
+.avatar {
+    display: flex;
+    position: absolute;
+}
+
+.avatar__image {
+    width: 200px;
+    height: auto;
+}
+
+.avatar__balloon {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 210px;
+    height: 80px;
+    top: 70px;
+    left: -50px;
+    position: relative;
+    align-items: flex-start;
+    border-radius: 10px;
+    background: var(--button);
+}
+
+.avatar__balloon:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: solid transparent 13px;
+    top: 5px;
+    border-right-color: var(--button);
+    left: -25px;
+}
+
+.avatar__balloon__message {
+    text-align: left;
+    margin: 20px;
+    color: var(--button-text);
+    font-size: 18px;
+}
