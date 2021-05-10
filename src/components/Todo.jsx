@@ -56,7 +56,7 @@ export function Todo() {
         <section className="todo">
             <TodoList todos={todos} toggleTodo={toggleTodo} />
             <input
-                className="todo_input"
+                className="todo__input"
                 ref={todoTaskRef}
                 type="text"
                 placeholder="Nueva Tarea"
