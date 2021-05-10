@@ -9,10 +9,7 @@
     display: grid;
     grid-template-columns: 8fr .5fr .5fr;
     padding-top: 10px;
-}
-
-.todo__input > * {
-    margin: 1px;
+    margin: 5px;
     font-family: Roboto;
     font-size: 14px;
 }

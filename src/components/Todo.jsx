@@ -30,14 +30,6 @@ export function Todo() {
         setLeft(todos.filter((todo) => !todo.completed).length)
     }, [todos])
 
-    const handleTodoAdd = () => {
-        const task = todoTaskRef.current.value;
-        task !== '' && setTodos((prevTodos) => {
-            return [...prevTodos, { id: uuid(), task, completed: false }]
-        });
-        todoTaskRef.current.value = null;
-    };
-
     const toggleTodo = (id) => {
         const newTodos = [...todos];
         const todo = newTodos.find((todo) => todo.id === id);
@@ -50,14 +42,26 @@ export function Todo() {
         setTodos(newTodos);
     };
 
+    const onEnterPress = (event) => {
+        if (event.key === 'Enter') {
+            const task = todoTaskRef.current.value;
+            task !== '' && setTodos((prevTodos) => {
+                return [...prevTodos, { id: uuid(), task, completed: false }]
+            });
+            todoTaskRef.current.value = null;
+        }
+    }
+
     return (
         <section className="todo">
             <TodoList todos={todos} toggleTodo={toggleTodo} />
-            <div className="todo__input">
-                <input ref={todoTaskRef} type="text" placeholder="Nueva Tarea" />
-                <button onClick={handleTodoAdd}>➕</button>
-                <button onClick={handleClearAll}>🗑</button>
-            </div>
+            <input
+                className="todo_input"
+                ref={todoTaskRef}
+                type="text"
+                placeholder="Nueva Tarea"
+                onKeyPress={onEnterPress}
+            />
             <div className="todo__left">
                 <p className="todo__left__text">
                     Te quedan <span className="left">{left}</span> tareas por terminar
