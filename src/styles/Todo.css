@@ -1,25 +1,25 @@
-.app {
+.todo {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.app__input {
+.todo__input {
     display: grid;
     grid-template-columns: 8fr .5fr .5fr;
 }
 
-.app__input > * {
+.todo__input > * {
     margin: 1px;
     font-family: Roboto;
 }
 
-.app__left {
+.todo__left {
     margin: 5px;
 }
 
-.app__left__text {
+.todo__left__text {
     text-align: center;
     font-family: Roboto;
     letter-spacing: .6px;

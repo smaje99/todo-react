@@ -14,5 +14,5 @@
 }
 
 html {
-    background-color: var(--background);
+    background: linear-gradient(125deg, var(--background) 0%, var(--background) 40%, #B2FCFF calc(40% + 1px), #B2FCFF 60%, #5EDFFF calc(60% + 1px), #5EDFFF 72%, #3E64FF calc(72% + 1px), #3E64FF 100%);
 }

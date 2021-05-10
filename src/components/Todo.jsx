@@ -53,13 +53,13 @@ export function Todo() {
     return (
         <section className="todo">
             <TodoList todos={todos} toggleTodo={toggleTodo} />
-            <div className="app__input">
+            <div className="todo__input">
                 <input ref={todoTaskRef} type="text" placeholder="Nueva Tarea" />
                 <button onClick={handleTodoAdd}>➕</button>
                 <button onClick={handleClearAll}>🗑</button>
             </div>
-            <div className="app__left">
-                <p className="app__left__text">Te quedan {left} tareas por terminar</p>
+            <div className="todo__left">
+                <p className="todo__left__text">Te quedan {left} tareas por terminar</p>
             </div>
         </section>
     );
