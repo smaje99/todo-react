@@ -31,3 +31,14 @@
 .left {
     color: var(--highlight);
 }
+
+.todo__clear {
+    padding: 10px 15px;
+    margin-bottom: 0;
+    background-color: var(--deleted);
+    color: var(--button-text);
+    border: 1px solid var(--deleted);
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}

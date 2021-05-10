@@ -63,6 +63,9 @@ export function Todo() {
                     Te quedan <span className="left">{left}</span> tareas por terminar
                 </p>
             </div>
+            <button className="todo__clear" onClick={handleClearAll}>
+                Limpiar tareas
+            </button>
         </section>
     );
 }

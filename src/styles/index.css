@@ -12,6 +12,7 @@
     --button-text: var(--background);
     --item-background: #d1d1e9;
     --item-item-checked: var(--highlight);
+    --deleted: var(--highlight);
 }
 
 html {
