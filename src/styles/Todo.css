@@ -17,6 +17,10 @@
     font-size: 16px;
 }
 
+.todo__input:focus {
+    outline: none;
+}
+
 .todo__left {
     margin: 2px 5px;
 }
