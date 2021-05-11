@@ -3,6 +3,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: absolute;
+    left: 70vw;
+    top: 45vh;
 }
 
 .controls__left {
@@ -17,7 +20,7 @@
 }
 
 .left {
-    color: var(--highlight);
+    color: var(--button-text);
     font-weight: 600;
 }
 
