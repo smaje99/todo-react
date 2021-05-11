@@ -48,7 +48,7 @@ export function Todo() {
 
     const onEnterPress = (event) => {
         if (event.key === 'Enter') {
-            const task = todoTaskRef.current.value;
+            const task = todoTaskRef.current.value.trim();
             task !== '' && setTodos((prevTodos) => {
                 return [...prevTodos, { id: uuid(), task, completed: false }]
             });
