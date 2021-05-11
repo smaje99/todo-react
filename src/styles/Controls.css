@@ -1,0 +1,33 @@
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.controls__left {
+    margin: 2px 5px;
+}
+
+.controls__left__text {
+    text-align: center;
+    font-family: Roboto;
+    font-size: 20px;
+    letter-spacing: .6px;
+}
+
+.left {
+    color: var(--highlight);
+    font-weight: 600;
+}
+
+.controls__clear {
+    padding: 10px 15px;
+    margin-bottom: 4px;
+    background-color: var(--deleted);
+    color: var(--button-text);
+    border: 1px solid var(--deleted);
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
