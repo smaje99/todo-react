@@ -20,7 +20,7 @@ export function Todo() {
     useEffect(() => {
         const storedTodos = JSON.parse(localStorage.getItem(KEY));
         storedTodos && setTodos(storedTodos);
-    }, [])
+    }, []);
 
     useEffect(() => {
         localStorage.setItem(KEY, JSON.stringify(todos));
@@ -28,7 +28,11 @@ export function Todo() {
 
     useEffect(() => {
         setLeft(todos.filter((todo) => !todo.completed).length)
-    }, [todos])
+    }, [todos]);
+
+    useEffect(() => {
+        todoTaskRef.current.focus();
+    });
 
     const toggleTodo = (id) => {
         const newTodos = [...todos];
