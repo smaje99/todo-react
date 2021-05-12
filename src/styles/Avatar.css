@@ -45,4 +45,5 @@
     color: var(--button-text);
     font-family: Roboto;
     font-size: 18px;
+    text-shadow: 2px 1px var(--paragraph);
 }

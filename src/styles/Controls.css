@@ -5,7 +5,7 @@
     flex-direction: column;
     position: absolute;
     left: 70vw;
-    top: 45vh;
+    top: 40vh;
 }
 
 .controls__left {
@@ -17,11 +17,13 @@
     font-family: Roboto;
     font-size: 20px;
     letter-spacing: .6px;
+    text-shadow: 1px 1px rgba(255, 255, 255, .4);
 }
 
 .left {
-    color: var(--button-text);
+    color: var(--highlight);
     font-weight: 600;
+    text-shadow: 1px 1px var(--button-text);
 }
 
 .controls__clear {
@@ -33,4 +35,15 @@
     border-radius: 10px;
     font-size: 15px;
     cursor: pointer;
+}
+
+.controls__clear:hover {
+    box-shadow:
+        0   2.8px   3.7px   rgba(0, 0, 0, 0.02),
+        0   6.7px   8.8px   rgba(0, 0, 0, 0.028),
+        0   12.5px  15.8px  rgba(0, 0, 0, 0.035),
+        0   22.3px  25.7px  rgba(0, 0, 0, 0.042),
+        0   41.8px  41.5px  rgba(0, 0, 0, 0.05),
+        0   100px   80px    rgba(0, 0, 0, 0.07)
+    ;
 }
