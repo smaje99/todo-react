@@ -7,8 +7,8 @@
 
 .todo__input {
     width: 25%;
-    padding: 5px 20px;
-    margin-top: 7px;
+    padding: 10px 20px;
+    margin: 10px 1px 28px 1px;
     border: 1px solid var(--background);
     border-radius: 20px;
     display: inline-block;
