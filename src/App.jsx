@@ -6,8 +6,6 @@ import { Todo } from './components/Todo'
 import { Avatar } from './components/Avatar'
 import { Controls } from './components/Controls'
 
-import './styles/App.css'
-
 const KEY = 'todoApp.todos'
 
 export function App() {
@@ -66,10 +64,8 @@ export function App() {
                 todoTaskRef={todoTaskRef}
                 onEnterPress={onEnterPress}
             />
-            <div className="panel">
-                <Avatar />
-                <Controls left={left} clearAll={clearAll} />
-            </div>
+            <Avatar />
+            <Controls left={left} clearAll={clearAll} />
         </>
     );
 }
