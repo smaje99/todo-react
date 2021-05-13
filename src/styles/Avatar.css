@@ -47,3 +47,31 @@
     font-size: 18px;
     text-shadow: 2px 1px var(--paragraph);
 }
+
+@media (max-width: 700px) {
+    .avatar {
+        top: 5px;
+        left: 5px;
+    }
+
+    .avatar__image {
+        width: 150px;
+    }
+
+    .avatar__balloon {
+        top: 170px;
+        left: -20px;
+    }
+
+    .avatar__balloon:before {
+        border: none;
+    }
+
+    .avatar__balloon__message {
+        width: 130px;
+        height: 30px;
+        margin: 14px;
+        padding-left: 10px;
+        font-size: 17px;
+    }
+}
