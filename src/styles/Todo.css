@@ -29,5 +29,6 @@
 
     .todo__input {
         width: 45%;
+        margin-bottom: 26px;
     }
 }
