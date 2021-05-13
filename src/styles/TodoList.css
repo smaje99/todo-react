@@ -14,3 +14,10 @@
 .list::-webkit-scrollbar {
     display: none;
 }
+
+
+@media (max-width: 700px) {
+    .list {
+        width: 45vw;
+    }
+}
