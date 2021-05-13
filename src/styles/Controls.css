@@ -51,7 +51,7 @@
 @media (max-width: 700px) {
     .controls {
         width: 200px;
-        left: 10px;
+        left: 0;
     }
 
     .controls__left__text {
