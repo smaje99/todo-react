@@ -5,6 +5,7 @@ Aplicación básica de **todos** en **React**
 Se implementaron las librerías:
 * React
 * react-uuid
+* react-icons
 
 ![todo](screenshots/todo.jpeg)
 ![responsive](screenshots/responsive.jpeg)
