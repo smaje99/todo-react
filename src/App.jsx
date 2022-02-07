@@ -5,6 +5,7 @@ import uuid from 'react-uuid'
 import { Todo } from './components/Todo'
 import { Avatar } from './components/Avatar'
 import { Controls } from './components/Controls'
+import { Github } from './components/Github'
 
 const KEY = 'todoApp.todos'
 
@@ -66,6 +67,7 @@ export function App() {
             />
             <Avatar />
             <Controls left={left} clearAll={clearAll} />
+            <Github />
         </>
     );
 }
