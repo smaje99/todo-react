@@ -1,0 +1,80 @@
+.avatar {
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 66vw;
+}
+
+.avatar__image {
+    width: 200px;
+    height: auto;
+    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.8));
+}
+
+.avatar__balloon {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: absolute;
+    align-items: flex-start;
+    margin-left: 20px;
+    top: 70px;
+    left: 148px;
+    border-radius: 10px;
+    background: var(--button);
+    border: 1px solid #533cc7;
+    box-shadow:  0px 0px 0px #533cc7,
+                10px 10px 30px #7151ff;
+}
+
+.avatar__balloon:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: solid transparent 13px;
+    top: 5px;
+    border-right-color: var(--button);
+    left: -25px;
+}
+
+.avatar__balloon__message {
+    text-align: left;
+    margin: 20px;
+    width: 180px;
+    color: var(--button-text);
+    font-family: Roboto;
+    font-size: 18px;
+    text-shadow: 2px 1px var(--paragraph);
+}
+
+@media (max-width: 700px) {
+    .avatar {
+        top: 5px;
+        left: 5px;
+    }
+
+    .avatar__image {
+        width: 150px;
+        margin-left: 14px;
+    }
+
+    .avatar__balloon {
+        top: 170px;
+        left: -15px;
+        padding-bottom: 8px;
+    }
+
+    .avatar__balloon:before {
+        border: none;
+    }
+
+    .avatar__balloon__message {
+        width: 130px;
+        height: 30px;
+        margin: 14px;
+        padding-left: 10px;
+        font-size: 17px;
+        letter-spacing: 0.03;
+    }
+}
